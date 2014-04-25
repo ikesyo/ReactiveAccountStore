@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD3DA034190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3DA033190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m */; };
 		CDB9A35F190A489400AC9AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A35E190A489400AC9AB2 /* Foundation.framework */; };
 		CDB9A361190A489400AC9AB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */; };
 		CDB9A363190A489400AC9AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A362190A489400AC9AB2 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		41350206AB2B444D8AA5890D /* Pods-ReactiveAccountStoreDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveAccountStoreDemoTests.xcconfig"; path = "Pods/Pods-ReactiveAccountStoreDemoTests.xcconfig"; sourceTree = "<group>"; };
 		8800EC9C31AE439D9F8872F4 /* libPods-ReactiveAccountStoreDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveAccountStoreDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3DA033190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAccountStoreReactiveSpec.m; sourceTree = "<group>"; };
+		CD3DA035190A5E1B004FB62F /* ReactiveAccountStoreDemoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ReactiveAccountStoreDemoTests-Prefix.pch"; path = "Tests/ReactiveAccountStoreDemoTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		CDB9A35B190A489400AC9AB2 /* ReactiveAccountStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveAccountStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB9A35E190A489400AC9AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -164,6 +167,7 @@
 			children = (
 				CDB9A385190A489400AC9AB2 /* ReactiveAccountStoreDemoTests-Info.plist */,
 				CDB9A386190A489400AC9AB2 /* InfoPlist.strings */,
+				CD3DA035190A5E1B004FB62F /* ReactiveAccountStoreDemoTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,6 +184,7 @@
 		CDB9A394190A498300AC9AB2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CD3DA033190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3DA034190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +499,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ReactiveAccountStoreDemo/ReactiveAccountStoreDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Tests/ReactiveAccountStoreDemoTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -516,7 +522,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ReactiveAccountStoreDemo/ReactiveAccountStoreDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Tests/ReactiveAccountStoreDemoTests-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveAccountStoreDemoTests/ReactiveAccountStoreDemoTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

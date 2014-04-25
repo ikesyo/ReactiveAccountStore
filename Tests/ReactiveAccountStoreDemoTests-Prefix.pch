@@ -1,0 +1,18 @@
+//
+//  ReactiveAccountStoreDemoTests-Prefix.pch
+//  ReactiveAccountStore
+//
+//  Created by Syo Ikeda on 4/25/14.
+//  Copyright (c) 2014 Syo Ikeda. All rights reserved.
+//
+
+@import Foundation;
+@import Accounts;
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+#import "OCMock.h"
+
+#define EXP_SHORTHAND
+#import "Specta.h"
+#import "Expecta.h"

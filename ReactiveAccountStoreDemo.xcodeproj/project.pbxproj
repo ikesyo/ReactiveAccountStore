@@ -23,6 +23,7 @@
 		CDB9A39B190A529600AC9AB2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39A190A529600AC9AB2 /* Accounts.framework */; };
 		CDB9A39D190A545D00AC9AB2 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */; };
 		CDB9A3A0190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */; };
+		E732D2F58E784940B068A8AC /* libPods-ReactiveAccountStoreDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8800EC9C31AE439D9F8872F4 /* libPods-ReactiveAccountStoreDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41350206AB2B444D8AA5890D /* Pods-ReactiveAccountStoreDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveAccountStoreDemoTests.xcconfig"; path = "Pods/Pods-ReactiveAccountStoreDemoTests.xcconfig"; sourceTree = "<group>"; };
+		8800EC9C31AE439D9F8872F4 /* libPods-ReactiveAccountStoreDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveAccountStoreDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB9A35B190A489400AC9AB2 /* ReactiveAccountStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveAccountStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB9A35E190A489400AC9AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +83,7 @@
 				CDB9A37E190A489400AC9AB2 /* XCTest.framework in Frameworks */,
 				CDB9A380190A489400AC9AB2 /* UIKit.framework in Frameworks */,
 				CDB9A37F190A489400AC9AB2 /* Foundation.framework in Frameworks */,
+				E732D2F58E784940B068A8AC /* libPods-ReactiveAccountStoreDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +99,7 @@
 				CDB9A383190A489400AC9AB2 /* ReactiveAccountStoreDemoTests */,
 				CDB9A35D190A489400AC9AB2 /* Frameworks */,
 				CDB9A35C190A489400AC9AB2 /* Products */,
+				41350206AB2B444D8AA5890D /* Pods-ReactiveAccountStoreDemoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +121,7 @@
 				CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */,
 				CDB9A362190A489400AC9AB2 /* UIKit.framework */,
 				CDB9A37D190A489400AC9AB2 /* XCTest.framework */,
+				8800EC9C31AE439D9F8872F4 /* libPods-ReactiveAccountStoreDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDB9A390190A489400AC9AB2 /* Build configuration list for PBXNativeTarget "ReactiveAccountStoreDemoTests" */;
 			buildPhases = (
+				4E05E10769B64D39A449972F /* Check Pods Manifest.lock */,
 				CDB9A378190A489400AC9AB2 /* Sources */,
 				CDB9A379190A489400AC9AB2 /* Frameworks */,
 				CDB9A37A190A489400AC9AB2 /* Resources */,
+				902DF2757D9148CE8CA0E7CF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +277,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E05E10769B64D39A449972F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		902DF2757D9148CE8CA0E7CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ReactiveAccountStoreDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDB9A357190A489400AC9AB2 /* Sources */ = {
@@ -443,6 +484,7 @@
 		};
 		CDB9A391190A489400AC9AB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41350206AB2B444D8AA5890D /* Pods-ReactiveAccountStoreDemoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ReactiveAccountStoreDemo.app/ReactiveAccountStoreDemo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -465,6 +507,7 @@
 		};
 		CDB9A392190A489400AC9AB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41350206AB2B444D8AA5890D /* Pods-ReactiveAccountStoreDemoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ReactiveAccountStoreDemo.app/ReactiveAccountStoreDemo";
 				FRAMEWORK_SEARCH_PATHS = (

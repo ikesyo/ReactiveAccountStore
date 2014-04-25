@@ -8,11 +8,14 @@
 
 @import Accounts.ACAccountStore;
 
+@class ACAccount;
 @class RACSignal;
 
 @interface ACAccountStore (RACSignalSupport)
 
 - (RACSignal *)rac_requestAccessToAccountsWithType:(ACAccountType *)accountType
                                            options:(NSDictionary *)options;
+
+- (RACSignal *)rac_saveAccount:(ACAccount *)account;
 
 @end

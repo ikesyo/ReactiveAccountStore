@@ -34,4 +34,19 @@
     }] setNameWithFormat:@"-rac_requestAccessToAccountsWithType: %@ options: %@",accountType.identifier, options];
 }
 
+- (RACSignal *)rac_saveAccount:(ACAccount *)account
+{
+    return [RACSignal createSignal:^ RACDisposable *(id<RACSubscriber> subscriber) {
+        [self saveAccount:account withCompletionHandler:^(BOOL success, NSError *error) {
+            if (success) {
+                [subscriber sendCompleted];
+            } else {
+                [subscriber sendError:error];
+            }
+        }];
+
+        return nil;
+    }];
+}
+
 @end

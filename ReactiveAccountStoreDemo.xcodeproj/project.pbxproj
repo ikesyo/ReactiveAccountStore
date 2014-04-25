@@ -20,7 +20,6 @@
 		CDB9A37F190A489400AC9AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A35E190A489400AC9AB2 /* Foundation.framework */; };
 		CDB9A380190A489400AC9AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A362190A489400AC9AB2 /* UIKit.framework */; };
 		CDB9A388190A489400AC9AB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDB9A386190A489400AC9AB2 /* InfoPlist.strings */; };
-		CDB9A38A190A489400AC9AB2 /* ReactiveAccountStoreDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB9A389190A489400AC9AB2 /* ReactiveAccountStoreDemoTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		CDB9A37D190A489400AC9AB2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CDB9A385190A489400AC9AB2 /* ReactiveAccountStoreDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReactiveAccountStoreDemoTests-Info.plist"; sourceTree = "<group>"; };
 		CDB9A387190A489400AC9AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CDB9A389190A489400AC9AB2 /* ReactiveAccountStoreDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveAccountStoreDemoTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +135,6 @@
 		CDB9A383190A489400AC9AB2 /* ReactiveAccountStoreDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				CDB9A389190A489400AC9AB2 /* ReactiveAccountStoreDemoTests.m */,
 				CDB9A384190A489400AC9AB2 /* Supporting Files */,
 			);
 			path = ReactiveAccountStoreDemoTests;
@@ -259,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB9A38A190A489400AC9AB2 /* ReactiveAccountStoreDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

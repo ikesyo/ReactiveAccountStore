@@ -21,6 +21,7 @@
 		CDB9A380190A489400AC9AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A362190A489400AC9AB2 /* UIKit.framework */; };
 		CDB9A388190A489400AC9AB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDB9A386190A489400AC9AB2 /* InfoPlist.strings */; };
 		CDB9A39B190A529600AC9AB2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39A190A529600AC9AB2 /* Accounts.framework */; };
+		CDB9A39D190A545D00AC9AB2 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CDB9A385190A489400AC9AB2 /* ReactiveAccountStoreDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReactiveAccountStoreDemoTests-Info.plist"; sourceTree = "<group>"; };
 		CDB9A387190A489400AC9AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CDB9A39A190A529600AC9AB2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libReactiveCocoa-iOS.a"; path = "External/ReactiveCocoa/ReactiveCocoaFramework/build/Debug-iphoneos/libReactiveCocoa-iOS.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				CDB9A361190A489400AC9AB2 /* CoreGraphics.framework in Frameworks */,
 				CDB9A363190A489400AC9AB2 /* UIKit.framework in Frameworks */,
 				CDB9A35F190A489400AC9AB2 /* Foundation.framework in Frameworks */,
+				CDB9A39D190A545D00AC9AB2 /* libReactiveCocoa-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 		CDB9A35D190A489400AC9AB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */,
 				CDB9A39A190A529600AC9AB2 /* Accounts.framework */,
 				CDB9A35E190A489400AC9AB2 /* Foundation.framework */,
 				CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */,
@@ -349,6 +353,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include\"",
+					"$(inherited)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -381,6 +389,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include\"",
+					"$(inherited)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -395,6 +407,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveAccountStoreDemo/ReactiveAccountStoreDemo-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveAccountStoreDemo/ReactiveAccountStoreDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/ReactiveCocoa/ReactiveCocoaFramework/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +425,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveAccountStoreDemo/ReactiveAccountStoreDemo-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveAccountStoreDemo/ReactiveAccountStoreDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/External/ReactiveCocoa/ReactiveCocoaFramework/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

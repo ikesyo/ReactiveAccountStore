@@ -80,6 +80,8 @@
 		CDB9A352190A489400AC9AB2 = {
 			isa = PBXGroup;
 			children = (
+				CDB9A393190A497B00AC9AB2 /* ReactiveAccountStore */,
+				CDB9A394190A498300AC9AB2 /* Tests */,
 				CDB9A364190A489400AC9AB2 /* ReactiveAccountStoreDemo */,
 				CDB9A383190A489400AC9AB2 /* ReactiveAccountStoreDemoTests */,
 				CDB9A35D190A489400AC9AB2 /* Frameworks */,
@@ -147,6 +149,20 @@
 				CDB9A386190A489400AC9AB2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDB9A393190A497B00AC9AB2 /* ReactiveAccountStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReactiveAccountStore;
+			sourceTree = "<group>";
+		};
+		CDB9A394190A498300AC9AB2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

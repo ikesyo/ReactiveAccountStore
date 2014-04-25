@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Syo Ikeda. All rights reserved.
 //
 
-#import "ACAccountStore+ReactiveAccountStore.h"
+#import "ACAccountStore+RACSignalSupport.h"
 
-SpecBegin(ACAccountStoreReactive)
+SpecBegin(ACAccountStoreRACSupport)
 
 describe(@"-rac_requestAccessToAccountsWithType:options:", ^{
     __block id mockStore;

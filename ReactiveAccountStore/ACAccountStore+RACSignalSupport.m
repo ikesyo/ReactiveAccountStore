@@ -1,19 +1,19 @@
 //
-//  ACAccountStore+ReactiveAccountStore.m
+//  ACAccountStore+RACSignalSupport.m
 //  ReactiveAccountStore
 //
 //  Created by Syo Ikeda on 4/25/14.
 //  Copyright (c) 2014 Syo Ikeda. All rights reserved.
 //
 
-#import "ACAccountStore+ReactiveAccountStore.h"
+#import "ACAccountStore+RACSignalSupport.h"
 #import <ReactiveCocoa/EXTScope.h>
 #import <ReactiveCocoa/RACSignal.h>
 #import <ReactiveCocoa/RACSubscriber.h>
 
 @import Accounts.ACAccountType;
 
-@implementation ACAccountStore (ReactiveAccountStore)
+@implementation ACAccountStore (RACSignalSupport)
 
 - (RACSignal *)rac_requestAccessToAccountsWithType:(ACAccountType *)accountType
                                            options:(NSDictionary *)options

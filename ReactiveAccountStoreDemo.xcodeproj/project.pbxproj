@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD3DA034190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3DA033190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m */; };
+		CD3DA034190A5D9A004FB62F /* ACAccountStoreRACSupportSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3DA033190A5D9A004FB62F /* ACAccountStoreRACSupportSpec.m */; };
 		CDB9A35F190A489400AC9AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A35E190A489400AC9AB2 /* Foundation.framework */; };
 		CDB9A361190A489400AC9AB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */; };
 		CDB9A363190A489400AC9AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A362190A489400AC9AB2 /* UIKit.framework */; };
@@ -23,7 +23,7 @@
 		CDB9A388190A489400AC9AB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDB9A386190A489400AC9AB2 /* InfoPlist.strings */; };
 		CDB9A39B190A529600AC9AB2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39A190A529600AC9AB2 /* Accounts.framework */; };
 		CDB9A39D190A545D00AC9AB2 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */; };
-		CDB9A3A0190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */; };
+		CDB9A3A0190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB9A39F190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.m */; };
 		E732D2F58E784940B068A8AC /* libPods-ReactiveAccountStoreDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8800EC9C31AE439D9F8872F4 /* libPods-ReactiveAccountStoreDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		41350206AB2B444D8AA5890D /* Pods-ReactiveAccountStoreDemoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveAccountStoreDemoTests.xcconfig"; path = "Pods/Pods-ReactiveAccountStoreDemoTests.xcconfig"; sourceTree = "<group>"; };
 		8800EC9C31AE439D9F8872F4 /* libPods-ReactiveAccountStoreDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveAccountStoreDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3DA033190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAccountStoreReactiveSpec.m; sourceTree = "<group>"; };
+		CD3DA033190A5D9A004FB62F /* ACAccountStoreRACSupportSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACAccountStoreRACSupportSpec.m; sourceTree = "<group>"; };
 		CD3DA035190A5E1B004FB62F /* ReactiveAccountStoreDemoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ReactiveAccountStoreDemoTests-Prefix.pch"; path = "Tests/ReactiveAccountStoreDemoTests-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		CDB9A35B190A489400AC9AB2 /* ReactiveAccountStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveAccountStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB9A35E190A489400AC9AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,8 +62,8 @@
 		CDB9A387190A489400AC9AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CDB9A39A190A529600AC9AB2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libReactiveCocoa-iOS.a"; path = "External/ReactiveCocoa/ReactiveCocoaFramework/build/Debug-iphoneos/libReactiveCocoa-iOS.a"; sourceTree = "<group>"; };
-		CDB9A39E190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccountStore+ReactiveAccountStore.h"; sourceTree = "<group>"; };
-		CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccountStore+ReactiveAccountStore.m"; sourceTree = "<group>"; };
+		CDB9A39E190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccountStore+RACSignalSupport.h"; sourceTree = "<group>"; };
+		CDB9A39F190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccountStore+RACSignalSupport.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +175,8 @@
 		CDB9A393190A497B00AC9AB2 /* ReactiveAccountStore */ = {
 			isa = PBXGroup;
 			children = (
-				CDB9A39E190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.h */,
-				CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */,
+				CDB9A39E190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.h */,
+				CDB9A39F190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.m */,
 			);
 			path = ReactiveAccountStore;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 		CDB9A394190A498300AC9AB2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CD3DA033190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m */,
+				CD3DA033190A5D9A004FB62F /* ACAccountStoreRACSupportSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			files = (
 				CDB9A375190A489400AC9AB2 /* ViewController.m in Sources */,
 				CDB9A36F190A489400AC9AB2 /* AppDelegate.m in Sources */,
-				CDB9A3A0190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m in Sources */,
+				CDB9A3A0190A554500AC9AB2 /* ACAccountStore+RACSignalSupport.m in Sources */,
 				CDB9A36B190A489400AC9AB2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3DA034190A5D9A004FB62F /* ACAccountStoreReactiveSpec.m in Sources */,
+				CD3DA034190A5D9A004FB62F /* ACAccountStoreRACSupportSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

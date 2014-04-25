@@ -1,5 +1,5 @@
 //
-//  ACAccountStore+ReactiveAccountStore.h
+//  ACAccountStore+RACSignalSupport.h
 //  ReactiveAccountStore
 //
 //  Created by Syo Ikeda on 4/25/14.
@@ -10,7 +10,7 @@
 
 @class RACSignal;
 
-@interface ACAccountStore (ReactiveAccountStore)
+@interface ACAccountStore (RACSignalSupport)
 
 - (RACSignal *)rac_requestAccessToAccountsWithType:(ACAccountType *)accountType
                                            options:(NSDictionary *)options;

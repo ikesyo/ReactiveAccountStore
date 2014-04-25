@@ -22,6 +22,7 @@
 		CDB9A388190A489400AC9AB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDB9A386190A489400AC9AB2 /* InfoPlist.strings */; };
 		CDB9A39B190A529600AC9AB2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39A190A529600AC9AB2 /* Accounts.framework */; };
 		CDB9A39D190A545D00AC9AB2 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */; };
+		CDB9A3A0190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		CDB9A387190A489400AC9AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CDB9A39A190A529600AC9AB2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CDB9A39C190A545D00AC9AB2 /* libReactiveCocoa-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libReactiveCocoa-iOS.a"; path = "External/ReactiveCocoa/ReactiveCocoaFramework/build/Debug-iphoneos/libReactiveCocoa-iOS.a"; sourceTree = "<group>"; };
+		CDB9A39E190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccountStore+ReactiveAccountStore.h"; sourceTree = "<group>"; };
+		CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccountStore+ReactiveAccountStore.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 		CDB9A393190A497B00AC9AB2 /* ReactiveAccountStore */ = {
 			isa = PBXGroup;
 			children = (
+				CDB9A39E190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.h */,
+				CDB9A39F190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m */,
 			);
 			path = ReactiveAccountStore;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			files = (
 				CDB9A375190A489400AC9AB2 /* ViewController.m in Sources */,
 				CDB9A36F190A489400AC9AB2 /* AppDelegate.m in Sources */,
+				CDB9A3A0190A554500AC9AB2 /* ACAccountStore+ReactiveAccountStore.m in Sources */,
 				CDB9A36B190A489400AC9AB2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

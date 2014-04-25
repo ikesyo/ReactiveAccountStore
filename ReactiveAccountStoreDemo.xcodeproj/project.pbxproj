@@ -20,6 +20,7 @@
 		CDB9A37F190A489400AC9AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A35E190A489400AC9AB2 /* Foundation.framework */; };
 		CDB9A380190A489400AC9AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A362190A489400AC9AB2 /* UIKit.framework */; };
 		CDB9A388190A489400AC9AB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDB9A386190A489400AC9AB2 /* InfoPlist.strings */; };
+		CDB9A39B190A529600AC9AB2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB9A39A190A529600AC9AB2 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CDB9A37D190A489400AC9AB2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CDB9A385190A489400AC9AB2 /* ReactiveAccountStoreDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReactiveAccountStoreDemoTests-Info.plist"; sourceTree = "<group>"; };
 		CDB9A387190A489400AC9AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CDB9A39A190A529600AC9AB2 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB9A39B190A529600AC9AB2 /* Accounts.framework in Frameworks */,
 				CDB9A361190A489400AC9AB2 /* CoreGraphics.framework in Frameworks */,
 				CDB9A363190A489400AC9AB2 /* UIKit.framework in Frameworks */,
 				CDB9A35F190A489400AC9AB2 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		CDB9A35D190A489400AC9AB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDB9A39A190A529600AC9AB2 /* Accounts.framework */,
 				CDB9A35E190A489400AC9AB2 /* Foundation.framework */,
 				CDB9A360190A489400AC9AB2 /* CoreGraphics.framework */,
 				CDB9A362190A489400AC9AB2 /* UIKit.framework */,

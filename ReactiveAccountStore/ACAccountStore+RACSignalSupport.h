@@ -13,9 +13,23 @@
 
 @interface ACAccountStore (RACSignalSupport)
 
+/**
+ *  Wraps -requestAccessToAccountsWithType:options:completion: with `RACSignal`.
+ *
+ *  @param accountType The account type.
+ *  @param options     The option dictionary which is required for certain
+ *                     account types (such as Facebook).
+ *  @return A signal that complets if access is granted, or sends error.
+ */
 - (RACSignal *)rac_requestAccessToAccountsWithType:(ACAccountType *)accountType
                                            options:(NSDictionary *)options;
 
+/**
+ *  Wraps -saveAccount:withCompletionHandler: with `RACSignal`.
+ *
+ *  @param account The account to save.
+ *  @return A signal that completes if successful, or sends error.
+ */
 - (RACSignal *)rac_saveAccount:(ACAccount *)account;
 
 /**
@@ -29,6 +43,12 @@
  */
 - (RACSignal *)rac_renewCredentialsForAccount:(ACAccount *)account;
 
+/**
+ *  Wraps -removeAccount:withCompletionHandler: with `RACSignal`.
+ *
+ *  @param account The account to remove.
+ *  @return A signal that completes if successful, or sends error.
+ */
 - (RACSignal *)rac_removeAccount:(ACAccount *)account;
 
 @end

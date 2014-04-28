@@ -1,5 +1,7 @@
 # ReactiveAccountStore ![License MIT](http://img.shields.io/badge/license-MIT-green.svg)
 
+[![Build Status](https://travis-ci.org/ikesyo/ReactiveAccountStore.svg?branch=master)](https://travis-ci.org/ikesyo/ReactiveAccountStore)
+
 [**ReactiveCocoa**](https://github.com/ReactiveCocoa/ReactiveCocoa) support for `Accounts.framework`.
 
 ## Usage

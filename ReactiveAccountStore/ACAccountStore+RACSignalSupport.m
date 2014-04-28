@@ -65,4 +65,19 @@
     }];
 }
 
+- (RACSignal *)rac_removeAccount:(ACAccount *)account
+{
+    return [RACSignal createSignal:^ RACDisposable *(id<RACSubscriber> subscriber) {
+        [self removeAccount:account withCompletionHandler:^(BOOL success, NSError *error) {
+            if (success) {
+                [subscriber sendCompleted];
+            } else {
+                [subscriber sendError:error];
+            }
+        }];
+
+        return nil;
+    }];
+}
+
 @end

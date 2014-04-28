@@ -191,4 +191,55 @@ describe(@"-rac_renewCredentialsForAccount:", ^{
     });
 });
 
+describe(@"-rac_removeAccount:", ^{
+    __block ACAccount *account;
+
+    void (^stubRemoveAccount)(BOOL) = ^(BOOL success) {
+        [[[mockStore
+            stub]
+            andDo:^(NSInvocation *invocation) {
+                ACAccountStoreRemoveCompletionHandler handler;
+                [invocation getArgument:&handler atIndex:3];
+
+                NSError *error = success ? nil : stubbedError;
+                handler(success, error);
+            }]
+            removeAccount:OCMOCK_ANY withCompletionHandler:OCMOCK_ANY];
+    };
+
+    beforeEach(^{
+        account = [[ACAccount alloc] initWithAccountType:type];
+        expect(account).notTo.beNil();
+    });
+
+    it(@"should send completed if remove succeeded", ^{
+        stubRemoveAccount(YES);
+        RACSignal *signal = [mockStore rac_removeAccount:account];
+
+        __block BOOL completed = NO;
+        [signal subscribeCompleted:^{
+            completed = YES;
+        }];
+
+        expect(completed).will.beTruthy();
+    });
+
+    it(@"should send error if remove failed", ^{
+        stubRemoveAccount(NO);
+        RACSignal *signal = [mockStore rac_removeAccount:account];
+
+        __block BOOL completed = NO;
+        __block NSError *error = nil;
+        [signal subscribeError:^(NSError *e) {
+            error = e;
+        } completed:^{
+            completed = YES;
+        }];
+
+        expect(completed).will.beFalsy();
+        expect(error).willNot.beNil();
+        expect(error.domain).will.equal(ACErrorDomain);
+    });
+});
+
 SpecEnd

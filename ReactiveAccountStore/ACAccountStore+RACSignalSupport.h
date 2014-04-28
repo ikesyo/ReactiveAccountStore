@@ -29,4 +29,6 @@
  */
 - (RACSignal *)rac_renewCredentialsForAccount:(ACAccount *)account;
 
+- (RACSignal *)rac_removeAccount:(ACAccount *)account;
+
 @end

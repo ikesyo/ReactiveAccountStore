@@ -121,4 +121,74 @@ describe(@"-rac_saveAccount:", ^{
     });
 });
 
+describe(@"-rac_renewCredentialsForAccount:", ^{
+    __block ACAccount *account;
+
+    void (^stubRenewCredentials)(ACAccountCredentialRenewResult) = ^(ACAccountCredentialRenewResult renewResult) {
+        [[[mockStore
+            stub]
+            andDo:^(NSInvocation *invocation) {
+                ACAccountStoreCredentialRenewalHandler handler;
+                [invocation getArgument:&handler atIndex:3];
+
+                NSError *error = ((NSInteger)renewResult != NSNotFound) ? nil : stubbedError;
+                handler(renewResult, error);
+            }]
+            renewCredentialsForAccount:OCMOCK_ANY completion:OCMOCK_ANY];
+    };
+
+    beforeEach(^{
+        account = [[ACAccount alloc] initWithAccountType:type];
+        expect(account).notTo.beNil();
+    });
+
+    describe(@"should send `renewResult` and complete if error did not occur", ^{
+        NSString *name = @"renewResult";
+
+        sharedExamplesFor(name, ^(NSDictionary *data) {
+            NSNumber *resultNumber = data[name];
+
+            stubRenewCredentials(resultNumber.integerValue);
+            RACSignal *signal = [mockStore rac_renewCredentialsForAccount:account];
+
+            __block ACAccountCredentialRenewResult result = NSNotFound;
+            __block BOOL completed = NO;
+            [signal subscribeNext:^(NSNumber *x) {
+                result = x.integerValue;
+            } completed:^{
+                completed = YES;
+            }];
+
+            expect(result).willNot.equal(NSNotFound);
+            expect(result).will.equal(resultNumber.integerValue);
+            expect(completed).will.beTruthy();
+        });
+
+        itShouldBehaveLike(name, @{ name: @(ACAccountCredentialRenewResultRenewed) });
+        itShouldBehaveLike(name, @{ name: @(ACAccountCredentialRenewResultRejected) });
+        itShouldBehaveLike(name, @{ name: @(ACAccountCredentialRenewResultFailed) });
+    });
+
+    it(@"should send error if error occured", ^{
+        stubRenewCredentials(NSNotFound);
+        RACSignal *signal = [mockStore rac_renewCredentialsForAccount:account];
+
+        __block BOOL next = NO;
+        __block BOOL completed = NO;
+        __block NSError *error = nil;
+        [signal subscribeNext:^(id x) {
+            next = YES;
+        } error:^(NSError *e) {
+            error = e;
+        } completed:^{
+            completed = YES;
+        }];
+
+        expect(next).will.beFalsy();
+        expect(completed).will.beFalsy();
+        expect(error).willNot.beNil();
+        expect(error.domain).will.equal(ACErrorDomain);
+    });
+});
+
 SpecEnd

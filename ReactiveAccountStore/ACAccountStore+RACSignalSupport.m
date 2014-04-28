@@ -49,4 +49,20 @@
     }];
 }
 
+- (RACSignal *)rac_renewCredentialsForAccount:(ACAccount *)account
+{
+    return [RACSignal createSignal:^ RACDisposable *(id<RACSubscriber> subscriber) {
+        [self renewCredentialsForAccount:account completion:^(ACAccountCredentialRenewResult renewResult, NSError *error) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                [subscriber sendNext:@(renewResult)];
+                [subscriber sendCompleted];
+            }
+        }];
+
+        return nil;
+    }];
+}
+
 @end

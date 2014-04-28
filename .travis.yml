@@ -7,9 +7,10 @@ xcode_sdk:
   - iphonesimulator7.0
 
 before_install:
+  - export LANG=en_US.UTF-8
   - brew update
   - brew upgrade xctool
   - gem update cocoapods
 
 before_script:
-  - export LANG=en_US.UTF-8
+  - pushd External/ReactiveCocoa; script/bootstrap; popd;

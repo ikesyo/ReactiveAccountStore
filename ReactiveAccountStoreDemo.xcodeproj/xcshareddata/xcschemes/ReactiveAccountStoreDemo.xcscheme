@@ -22,13 +22,27 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "88F440AA153DAC820097B4C3"
+               BuildableName = "libReactiveCocoa-iOS.a"
+               BlueprintName = "ReactiveCocoa-iOS"
+               ReferencedContainer = "container:External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA2E479D1BDF46A599CB6A64"
+               BlueprintIdentifier = "7B656ACD77424CD9BA95CA7C"
                BuildableName = "libPods-ReactiveAccountStoreDemoTests.a"
                BlueprintName = "Pods-ReactiveAccountStoreDemoTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

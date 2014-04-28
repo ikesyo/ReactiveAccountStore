@@ -7,7 +7,6 @@
 //
 
 #import "ACAccountStore+RACSignalSupport.h"
-#import <ReactiveCocoa/EXTScope.h>
 #import <ReactiveCocoa/RACSignal.h>
 #import <ReactiveCocoa/RACSubscriber.h>
 

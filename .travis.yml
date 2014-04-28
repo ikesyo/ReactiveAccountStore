@@ -1,0 +1,11 @@
+language: objective-c
+
+xcode_workspace: ReactiveAccountStoreDemo.xcworkspace
+xcode_scheme: ReactiveAccountStoreDemo
+xcode_sdk:
+  - iphonesimulator7.1
+  - iphonesimulator7.0
+
+before_install:
+  - brew update
+  - brew upgrade xctool

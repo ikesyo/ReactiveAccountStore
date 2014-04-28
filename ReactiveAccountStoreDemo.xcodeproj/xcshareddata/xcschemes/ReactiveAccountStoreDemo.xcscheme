@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDB9A35A190A489400AC9AB2"
-               BuildableName = "ReactiveAccountStoreDemo.app"
-               BlueprintName = "ReactiveAccountStoreDemo"
-               ReferencedContainer = "container:ReactiveAccountStoreDemo.xcodeproj">
+               BlueprintIdentifier = "88F440AA153DAC820097B4C3"
+               BuildableName = "libReactiveCocoa-iOS.a"
+               BlueprintName = "ReactiveCocoa-iOS"
+               ReferencedContainer = "container:External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88F440AA153DAC820097B4C3"
-               BuildableName = "libReactiveCocoa-iOS.a"
-               BlueprintName = "ReactiveCocoa-iOS"
-               ReferencedContainer = "container:External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj">
+               BlueprintIdentifier = "CDB9A35A190A489400AC9AB2"
+               BuildableName = "ReactiveAccountStoreDemo.app"
+               BlueprintName = "ReactiveAccountStoreDemo"
+               ReferencedContainer = "container:ReactiveAccountStoreDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -42,7 +42,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B656ACD77424CD9BA95CA7C"
+               BlueprintIdentifier = "B75A394B6468438BBB9784EC"
                BuildableName = "libPods-ReactiveAccountStoreDemoTests.a"
                BlueprintName = "Pods-ReactiveAccountStoreDemoTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

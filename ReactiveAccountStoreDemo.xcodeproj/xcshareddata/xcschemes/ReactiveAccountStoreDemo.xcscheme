@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ReactiveAccountStoreDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EA2E479D1BDF46A599CB6A64"
+               BuildableName = "libPods-ReactiveAccountStoreDemoTests.a"
+               BlueprintName = "Pods-ReactiveAccountStoreDemoTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -6,8 +6,12 @@ xcode_sdk:
   - iphonesimulator7.1
   - iphonesimulator7.0
 
+env:
+  global:
+  - LANG=en_US.UTF-8
+  - LC_ALL=en_US.UTF-8
+
 before_install:
-  - export LANG=en_US.UTF-8
   - brew update
   - brew upgrade xctool
   - gem update cocoapods

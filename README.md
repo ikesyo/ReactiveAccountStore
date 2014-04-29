@@ -1,5 +1,7 @@
 # ReactiveAccountStore ![License MIT](http://img.shields.io/badge/license-MIT-green.svg)
 
+[![Version](https://cocoapod-badges.herokuapp.com/v/ReactiveAccountStore/badge.png)](https://cocoapod-badges.herokuapp.com/v/ReactiveAccountStore/badge.png)
+[![Platform](https://cocoapod-badges.herokuapp.com/p/ReactiveAccountStore/badge.png)](https://cocoapod-badges.herokuapp.com/p/ReactiveAccountStore/badge.png)
 [![Analytics](https://ga-beacon.appspot.com/UA-205122-10/ReactiveAccountStore/README.md)](https://github.com/igrigorik/ga-beacon)
 
 [**ReactiveCocoa**](https://github.com/ReactiveCocoa/ReactiveCocoa) support for `Accounts.framework`.

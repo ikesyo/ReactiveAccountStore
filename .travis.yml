@@ -14,7 +14,7 @@ env:
 before_install:
   - brew update
   - brew upgrade xctool
-  - gem update cocoapods
+  - gem update cocoapods --no-ri --no-rdoc
 
 before_script:
   - pushd External/ReactiveCocoa; script/bootstrap; popd;

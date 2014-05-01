@@ -1,10 +1,10 @@
 language: objective-c
 
-xcode_workspace: ReactiveAccountStoreDemo.xcworkspace
-xcode_scheme: ReactiveAccountStoreDemo
-xcode_sdk:
-  - iphonesimulator7.1
-  - iphonesimulator7.0
+# xcode_workspace: ReactiveAccountStoreDemo.xcworkspace
+# xcode_scheme: ReactiveAccountStoreDemo
+# xcode_sdk:
+#   - iphonesimulator7.1
+#   - iphonesimulator7.0
 
 env:
   global:
@@ -18,3 +18,9 @@ before_install:
 
 before_script:
   - pushd External/ReactiveCocoa; script/bootstrap; popd;
+
+# https://github.com/travis-ci/travis-ci/issues/2197
+# https://github.com/fulldecent/FDSoundActivatedRecorder/commit/941f58be58f941e270d7a7fd4a757cab3bda657a
+
+script: 
+- xctool -workspace ReactiveAccountStoreDemo.xcworkspace -scheme ReactiveAccountStoreDemo -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO clean build test

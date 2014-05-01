@@ -23,4 +23,4 @@ before_script:
 # https://github.com/fulldecent/FDSoundActivatedRecorder/commit/941f58be58f941e270d7a7fd4a757cab3bda657a
 
 script: 
-- xctool -workspace ReactiveAccountStoreDemo.xcworkspace -scheme ReactiveAccountStoreDemo -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO clean build test
+- xcodebuild -workspace ReactiveAccountStoreDemo.xcworkspace -scheme ReactiveAccountStoreDemo -sdk iphonesimulator7.1 ONLY_ACTIVE_ARCH=NO clean build test

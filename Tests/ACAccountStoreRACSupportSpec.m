@@ -146,22 +146,25 @@ describe(@"-rac_renewCredentialsForAccount:", ^{
         NSString *name = @"renewResult";
 
         sharedExamplesFor(name, ^(NSDictionary *data) {
-            NSNumber *resultNumber = data[name];
+            ACAccountCredentialRenewResult result = [data[name] integerValue];
 
-            stubRenewCredentials(resultNumber.integerValue);
-            RACSignal *signal = [mockStore rac_renewCredentialsForAccount:account];
+            NSString *title = [NSString stringWithFormat:@"should send `%ld` and complete", result];
+            it(title, ^{
+                stubRenewCredentials(result);
+                RACSignal *signal = [mockStore rac_renewCredentialsForAccount:account];
 
-            __block ACAccountCredentialRenewResult result = NSNotFound;
-            __block BOOL completed = NO;
-            [signal subscribeNext:^(NSNumber *x) {
-                result = x.integerValue;
-            } completed:^{
-                completed = YES;
-            }];
+                __block ACAccountCredentialRenewResult expected = NSNotFound;
+                __block BOOL completed = NO;
+                [signal subscribeNext:^(NSNumber *x) {
+                    expected = x.integerValue;
+                } completed:^{
+                    completed = YES;
+                }];
 
-            expect(result).willNot.equal(NSNotFound);
-            expect(result).will.equal(resultNumber.integerValue);
-            expect(completed).will.beTruthy();
+                expect(expected).willNot.equal(NSNotFound);
+                expect(expected).will.equal(result);
+                expect(completed).will.beTruthy();
+            });
         });
 
         itShouldBehaveLike(name, @{ name: @(ACAccountCredentialRenewResultRenewed) });

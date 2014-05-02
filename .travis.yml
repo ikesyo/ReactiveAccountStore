@@ -1,26 +1,16 @@
 language: objective-c
 
-# xcode_workspace: ReactiveAccountStoreDemo.xcworkspace
-# xcode_scheme: ReactiveAccountStoreDemo
-# xcode_sdk:
-#   - iphonesimulator7.1
-#   - iphonesimulator7.0
-
 env:
   global:
   - LANG=en_US.UTF-8
   - LC_ALL=en_US.UTF-8
 
 before_install:
-  - brew update
-  - brew upgrade xctool
+  - gem install xcpretty --no-ri --no-rdoc
   - gem update cocoapods --no-ri --no-rdoc
 
 before_script:
   - pushd External/ReactiveCocoa; script/bootstrap; popd;
 
-# https://github.com/travis-ci/travis-ci/issues/2197
-# https://github.com/fulldecent/FDSoundActivatedRecorder/commit/941f58be58f941e270d7a7fd4a757cab3bda657a
-
-script: 
-- xcodebuild -workspace ReactiveAccountStoreDemo.xcworkspace -scheme ReactiveAccountStoreDemo -sdk iphonesimulator7.1 -destination 'name=iPhone Retina (4-inch 64-bit),OS=7.1' ONLY_ACTIVE_ARCH=NO clean build test
+script:
+  - rake WORKSPACE=ReactiveAccountStoreDemo.xcworkspace SCHEMES="ReactiveAccountStoreDemo"

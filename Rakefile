@@ -57,9 +57,19 @@ task :test do |t|
         destination: "#{destination}"
       }
       options = join_option(options: options, prefix: "-", seperator: " ")
+      settings = {
+        GCC_INSTRUMENT_PROGRAM_FLOW_ARCS: "YES",
+        GCC_GENERATE_TEST_COVERAGE_FILES: "YES"
+      }
+      settings = join_option(options: settings, prefix: "", seperator: "=")
       sh "xcodebuild test #{options} | xcpretty -tc; exit ${PIPESTATUS[0]}"
     end
   end
+end
+
+desc "send coverage reports to Coveralls"
+task :send_coverage do |t|
+  sh "coveralls -e ReactiveAccountStoreDemo"
 end
 
 def get_workspace

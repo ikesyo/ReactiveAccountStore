@@ -6,6 +6,7 @@ env:
   - LC_ALL=en_US.UTF-8
 
 before_install:
+  - sudo easy_install cpp-coveralls
   - gem install xcpretty --no-ri --no-rdoc
   - gem update cocoapods --no-ri --no-rdoc
 
@@ -14,3 +15,6 @@ before_script:
 
 script:
   - rake WORKSPACE=ReactiveAccountStoreDemo.xcworkspace SCHEMES="ReactiveAccountStoreDemo"
+
+after_success:
+  - rake send_coverage

@@ -1,0 +1,16 @@
+language: objective-c
+
+env:
+  global:
+  - LANG=en_US.UTF-8
+  - LC_ALL=en_US.UTF-8
+
+before_install:
+  - gem install xcpretty --no-ri --no-rdoc
+  - gem update cocoapods --no-ri --no-rdoc
+
+before_script:
+  - pushd External/ReactiveCocoa; script/bootstrap; popd;
+
+script:
+  - rake WORKSPACE=ReactiveAccountStoreDemo.xcworkspace SCHEMES="ReactiveAccountStoreDemo"

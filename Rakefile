@@ -69,7 +69,7 @@ end
 
 desc "send coverage reports to Coveralls"
 task :send_coverage do |t|
-  sh "coveralls -e External -e Pods -E '.*/ReactiveAccountStoreDemo/.*'"
+  sh "coveralls -e External -e Pods -e ReactiveAccountStoreDemo"
 end
 
 def get_workspace

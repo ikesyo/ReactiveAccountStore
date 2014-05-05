@@ -58,6 +58,7 @@ task :test do |t|
       }
       options = join_option(options: options, prefix: "-", seperator: " ")
       settings = {
+        OBJROOT: "build",
         GCC_INSTRUMENT_PROGRAM_FLOW_ARCS: "YES",
         GCC_GENERATE_TEST_COVERAGE_FILES: "YES"
       }

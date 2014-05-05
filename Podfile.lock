@@ -1,15 +1,18 @@
 PODS:
   - Expecta (0.3.0)
+  - GenerateTestCoverageFor_iOS7 (1.0.0)
   - OCMock (2.2.4)
   - Specta (0.2.1)
 
 DEPENDENCIES:
   - Expecta
+  - GenerateTestCoverageFor_iOS7
   - OCMock
   - Specta
 
 SPEC CHECKSUMS:
   Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
+  GenerateTestCoverageFor_iOS7: 364d42cdaf97eac01dee4b21ff6bc80d8461b92f
   OCMock: 5008fae4b4789b8fc3e48cd7660f2eb5ef8ce89e
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
